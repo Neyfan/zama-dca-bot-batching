@@ -1,0 +1,28 @@
+{
+  "name": "zama-dca-bot-batching",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "hardhat compile",
+    "test": "hardhat test",
+    "deploy": "hardhat run scripts/deploy.ts --network localhost",
+    "demo": "ts-node scripts/demo.ts",
+    "api": "ts-node api/server.ts",
+    "bot": "ts-node bot/batcher.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/express": "^5.0.3",
+    "@types/node": "^20.11.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "ethers": "^6.15.0",
+    "express": "^4.21.2",
+    "p-limit": "^6.1.0"
+  }
+}

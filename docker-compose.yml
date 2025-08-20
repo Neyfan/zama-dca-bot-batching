@@ -1,0 +1,13 @@
+services:
+  api:
+    build: .
+    env_file: .env
+    ports:
+      - "8787:8787"
+    command: ["npm","run","api"]
+  bot:
+    build: .
+    env_file: .env
+    command: ["npm","run","bot"]
+    depends_on:
+      - api
